@@ -8,7 +8,6 @@ import { HeroSection } from "@/components/Home/hero";
 import InfoCardsSection from "@/components/Home/InfoCardsSectiondemo";
 import MangalyaSpeciality from "@/components/Home/mangalyaSpeciality";
 import QuoteBanner from "@/components/Home/quoteBanner";
-import DottedSafetyCard from "@/components/Home/SafetyCard";
 import { TopProperties } from "@/components/Home/top-performig";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <MangalyaSpeciality />
       <ContactSection />
       <FAQSection />
-      <DottedSafetyCard />
       <Footer />
     </>
   );
