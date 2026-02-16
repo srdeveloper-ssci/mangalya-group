@@ -28,7 +28,7 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  const isActive = (href) => {
+  const isActive = (href: string) => {
     if (href === "/") {
       return pathname === "/";
     }
