@@ -43,7 +43,7 @@ export default function StoryBehindSuccess() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="order-1 lg:order-2 relative h-[420px] md:h-[500px] overflow-hidden">
+          <div className="order-1 lg:order-2 relative h-[500px] overflow-hidden">
             <Image
               src="/blogs/mangalya-projects/img-1.png"
               alt="Mangalya Group Project"
