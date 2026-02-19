@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export function HeroSection() {
@@ -166,10 +167,13 @@ export function HeroSection() {
           </h1>
 
           {/* CTA */}
-          <button className="hero-button px-8 sm:px-14 py-3 sm:py-4 bg-black text-white text-xs sm:text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-500 shadow-2xl">
+          <Link
+            href="/contact"
+            className="hero-button inline-flex items-center gap-2 px-8 sm:px-14 py-3 sm:py-4 bg-black text-white text-xs sm:text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-500 shadow-2xl"
+          >
             Enquire Now
             <span className="arrow-icon">→</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
