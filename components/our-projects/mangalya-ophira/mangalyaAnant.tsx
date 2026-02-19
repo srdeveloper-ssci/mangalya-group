@@ -7,21 +7,18 @@ import EnquirePopup from "@/components/EnquirePopup";
 export function MangalyaSection() {
   const [open, setOpen] = useState(false);
   return (
-    <section className="bg-white px-[20px] py-[70px]">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
+    <section className="bg-white px-[20px] md:py-[35px] py-[40px]">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[30px] md:gap-[80px] items-center">
         {/* LEFT CONTENT */}
         <div>
-          <div className="w-[70px] h-[4px] bg-green-600 rounded mb-5" />
+          <div className="md:w-[230px] md:h-[8px] w-[35%] h-1.5 bg-[#008854] rounded mb-2" />
 
-          <h2 className="text-[32px] leading-[1.25] font-semibold text-[#111] mb-5">
-            Mangalya Anant. Setting a New
-            <br />
-            Benchmark in Lifestyle & Long-
-            <br />
-            Term Worth.
+          <h2 className="font-poppins text-[18px] md:text-[35px] leading-[1.28] font-medium mb-5">
+            Mangalya Anant. Setting a New Benchmark in Lifestyle & Long-Term
+            Worth.
           </h2>
 
-          <p className="text-[14.5px] text-[#666] leading-[1.7] max-w-[520px] mb-8">
+          <p className="font-poppins font-light text-[13px] md:text-[16px] text-[#3F3F3F] leading-[1.28] max-w-[550px] mb-8">
             Mangalya Anant, originally envisioned by Horizon Dwellings Pvt.
             Ltd., is now under the esteemed management of Mangalya Group. Backed
             by a legacy of excellence, the project blends timely delivery,
@@ -32,7 +29,7 @@ export function MangalyaSection() {
 
           <button
             onClick={() => setOpen(true)}
-            className="bg-black text-white px-7 py-3 text-sm w-fit hover:bg-gray-800 transition"
+            className="font-poppins font-light bg-black text-white px-5 py-2 md:py-3 md:px-7 text-[13px] md:text-[14px] w-fit hover:bg-[#008854] transition"
           >
             Download Brochure
           </button>
@@ -44,24 +41,27 @@ export function MangalyaSection() {
           {/* TOP CARDS */}
           <div className="grid grid-cols-2 gap-4">
             {/* Card 1 */}
-            <div className="bg-white rounded-xl p-4 border shadow-sm">
-              <h4 className="text-[14px] font-semibold mb-1">
-                Smart Infrastructure
+            <div className="bg-white rounded-xl p-4 border shadow-xl">
+              <h4 className="text-[14px] md:text-[16px] font-poppins font-medium mb-1">
+                Smart <br />
+                Infrastructure
               </h4>
-              <p className="text-[12.5px] text-[#777] leading-[1.5]">
+              <p className="font-poppins font-light text-[12px] text-[#3F3F3F] leading-[1.5]">
                 Trusted quality and nature-inspired living come together for
                 lasting value.
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-xl p-4 border shadow-sm flex gap-3">
+            <div className="bg-white rounded-xl p-4 border shadow-xl gap-3">
               <div className="w-9 h-9 bg-black text-white rounded-lg flex items-center justify-center">
                 ✓
               </div>
               <div>
-                <h4 className="text-[14px] font-semibold">99% Trusted</h4>
-                <p className="text-[12.5px] text-[#777]">
+                <h4 className="text-[14px] md:text-[16px] font-poppins font-medium mb-1 mt-2">
+                  99% Trusted
+                </h4>
+                <p className="font-poppins font-light text-[12px] text-[#3F3F3F] leading-[1.5]">
                   Built on trust. Backed by experience.
                 </p>
               </div>
