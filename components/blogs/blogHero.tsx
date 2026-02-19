@@ -47,24 +47,24 @@ export default function BlogHero() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 bg-black/15 group-hover:bg-black/40 transition-colors duration-300" />
 
             {/* Content */}
-            <div className="absolute bottom-6 left-6 text-white max-w-xl">
+            <div className="absolute bottom-3 left-3 md:bottom-6 md:left-6 text-white max-w-xl">
               <div className="flex gap-2 mb-3 flex-wrap">
-                <span className="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="font-poppins bg-yellow-400 text-black text-[10px] font-light px-3 py-1 rounded-full">
                   Technology
                 </span>
-                <span className="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="font-poppins bg-yellow-400 text-black text-[10px] font-light px-3 py-1 rounded-full">
                   Other Category
                 </span>
               </div>
 
-              <h2 className="text-xl md:text-2xl font-poppins font-semibold leading-snug mb-2">
+              <h2 className="text-[15px] md:text-[20px] font-poppins font-semibold leading-snug mb-2">
                 Creating Communities, Developing Dreams
               </h2>
 
-              <span className="bg-white text-black font-poppins text-xs px-3 py-1 rounded-full inline-block">
+              <span className="bg-white text-black font-poppins font-light text-[10px] px-3 py-1 rounded-full inline-block">
                 The Mangalyam Group Story
               </span>
             </div>

@@ -50,16 +50,14 @@ export default function BlogGrid() {
               className="object-cover transition-transform duration-500 group-hover:scale-110"
               priority={index < 2}
             />
-
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div />
 
             {/* Tags - Top Right */}
-            <div className="absolute top-4 right-4 flex gap-2 z-20 flex-wrap justify-end">
+            <div className="absolute top-3 right-3 md:top-5 md:right-5 flex gap-2 z-20 flex-wrap justify-end">
               {blog.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="bg-yellow-400 text-black text-xs font-semibold px-3 py-1.5 rounded-full whitespace-nowrap"
+                  className="font-poppins font-light bg-yellow-400 text-black text-[10px] px-3 py-1.5 rounded-full whitespace-nowrap"
                 >
                   {tag}
                 </span>
@@ -67,13 +65,13 @@ export default function BlogGrid() {
             </div>
 
             {/* Content - Bottom Bar (Full Width) */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-5 md:px-6 py-4 md:py-5 flex justify-between items-end gap-4">
+            <div className="absolute bottom-0 left-0 right-0 bg-black/30 px-5 md:px-6 py-4 md:py-5 flex justify-between items-end gap-4">
               {/* Text Container */}
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg md:text-xl font-bold text-white leading-tight mb-1">
+                <h3 className="font-poppins text-[15px] md:text-[20px] font-medium text-white leading-tight mb-1">
                   {blog.title}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-100 opacity-90 line-clamp-1">
+                <p className="font-poppins font-light text-[10px] text-gray-100 opacity-100 line-clamp-1">
                   {blog.desc}
                 </p>
               </div>
