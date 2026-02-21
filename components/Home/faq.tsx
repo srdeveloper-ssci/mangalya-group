@@ -37,7 +37,7 @@ export default function FAQSection() {
     <section className="py-20 bg-white font-['Poppins']">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-14">
+        <h2 className="text-[25px] md:text-[40px] font-semibold text-center font-poppins mb-14">
           Frequently Asked Questions(FAQ)
         </h2>
 
@@ -50,12 +50,10 @@ export default function FAQSection() {
                 <div key={index} className="mb-4">
                   {/* Question */}
                   <button
-                    onClick={() =>
-                      setOpenIndex(isOpen ? -1 : index)
-                    }
+                    onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     className="w-full bg-gray-50 px-6 py-4 flex items-center justify-between text-left"
                   >
-                    <span className="font-semibold text-gray-900">
+                    <span className="font-medium text-gray-900 text-[16px] md:text-[18px] font-poppins ">
                       {item.question}
                     </span>
                     <span className="text-2xl text-gray-500">
@@ -66,7 +64,7 @@ export default function FAQSection() {
                   {/* Answer */}
                   {isOpen && (
                     <div className="bg-emerald-50 px-6 py-4 border-b-4 border-emerald-500">
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-[13px] md:[15px] font-poppins font-light text-[#524F4F] leading-relaxed">
                         {item.answer}
                       </p>
                     </div>
@@ -77,14 +75,14 @@ export default function FAQSection() {
           </div>
 
           {/* Image */}
-          <div className="relative w-[400px] h-[450px] hidden lg:block">
-            <Image
-              src="/faq-img.png"
-              alt="Building"
-              fill
-              className="object-cover"
-            />
-          </div>
+          <div className="relative w-full h-[400px] lg:w-[400px] lg:h-[450px]">
+  <Image
+    src="/faq-img-new.png"
+    alt="Building"
+    fill
+    className="object-cover"
+  />
+</div>
         </div>
       </div>
     </section>
