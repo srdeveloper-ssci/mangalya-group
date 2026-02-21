@@ -41,7 +41,8 @@ export function AboutSection() {
             {/* Main Heading */}
             <div className="flex-1">
               <h1 className="text-[20px] md:text-[40px] font-poppins font-extra-light leading-[128%] text-gray-600">
-                Discover your dream of premium <br/>living at Mangalya
+                Discover your dream of premium <br />
+                living at Mangalya
               </h1>
             </div>
 
