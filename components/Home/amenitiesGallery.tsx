@@ -31,25 +31,25 @@ export function AmenitiesGallery() {
 
   return (
     <>
-      <section className="relative py-40 bg-gray-50 overflow-hidden">
+      <section className="relative pt-20 pb-35 md:pt-40 md:pb-40 bg-gray-50 overflow-hidden px-6">
         {/* Background Leaves (unchanged) */}
-        <div className="absolute top-5 right-10 md:right-170 w-32 md:w-52 lg:w-64 pointer-events-none">
+        <div className="absolute md:top-5 top-[-10] right-[-20] md:right-170 w-32 md:w-52 lg:w-64 pointer-events-none">
           <Image
             src="/top-leaf.png"
             alt="leaf"
             width={300}
             height={300}
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain rotate-320 md:rotate-0"
           />
         </div>
 
-        <div className="absolute bottom-5 right-5 md:right-60 w-32 md:w-64 pointer-events-none">
+        <div className="absolute bottom-5 right-55 md:right-60 w-52 md:w-64 pointer-events-none">
           <Image
             src="/right-bottom-leaf.png"
             alt="leaf"
             width={300}
             height={300}
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain rotate-80 md:rotate-0"
           />
         </div>
 
