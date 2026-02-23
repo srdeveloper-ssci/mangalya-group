@@ -20,7 +20,7 @@ export default function QuoteStrip() {
             Smart planning, {/* Green word with leaf */}
             <span className="relative inline-block text-emerald-600 font-mix">
               green
-              <span className="absolute -top-4 right-[-20px] md:-top-6 md:right-[-30px] w-10 md:w-14">
+              <span className="absolute -top-5 right-[-20px] md:-top-6 md:right-[-30px] w-10 md:w-14">
                 <Image
                   src="/about-us/leaf.png"
                   alt="leaf"

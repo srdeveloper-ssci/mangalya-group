@@ -22,13 +22,13 @@ export function AboutSection() {
         <div className="flex justify-end">
           <div className="flex items-start gap-4 md:gap-5">
             <div className="w-20 md:w-24 lg:w-30 h-[1.5px] bg-black mt-3 md:mt-4"></div>
-            <div className="text-right -space-y-1 md:-space-y-2">
-              <h2 className="text-[35px] md:text-[50px] font-bold text-black tracking-[0.15em] font-handwritten leading-none">
+            <div className="text-right space-y-0 md:space-y-1">
+              <h2 className="text-[25px] md:text-[50px] font-medium text-black tracking-[0.15em] font-poppins leading-none">
                 ABOUT
               </h2>
               <div className="flex justify-end">
-                <span className="text-[35px] md:text-[50px] font-bold text-black tracking-[0.15em] font-handwritten leading-none">
-                  us
+                <span className="text-[25px] md:text-[50px] font-bold text-black tracking-[0.15em] font-handwritten leading-none">
+                  US
                 </span>
               </div>
             </div>
