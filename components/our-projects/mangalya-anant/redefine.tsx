@@ -71,7 +71,7 @@ export function RedefineSection() {
           {/* BOTTOM IMAGE CARD */}
           <div className="bg-white">
             <Image
-              src="/our-projects/mangalya-anant/anant.png"
+              src="/our-projects/mangalya-ophira/mangalya.png"
               alt="Location map"
               width={520}
               height={300}

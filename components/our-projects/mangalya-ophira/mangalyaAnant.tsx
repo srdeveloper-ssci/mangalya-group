@@ -71,7 +71,7 @@ export function MangalyaSection() {
           {/* BOTTOM IMAGE CARD */}
           <div className="bg-white">
             <Image
-              src="/our-projects/mangalya-ophira/mangalya.png"
+              src="/our-projects/mangalya-anant/anant.png"
               alt="Location map"
               width={520}
               height={300}

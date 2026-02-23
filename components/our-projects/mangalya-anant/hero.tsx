@@ -9,7 +9,7 @@ export default function HeroSection() {
         {/* Desktop Image */}
         <div className="hidden md:block w-full">
           <Image
-            src="/our-projects/mangalya-anant/hero.png"
+            src="/our-projects/mangalya-ophira/home-hero.png"
             alt="Mangalya Project"
             width={1920}
             height={900}
@@ -21,7 +21,7 @@ export default function HeroSection() {
         {/* Mobile Image */}
         <div className="block md:hidden w-full">
           <Image
-            src="/our-projects/mangalya-anant/hero-mobile.png"
+            src="/our-projects/mangalya-ophira/hero-mobile.png"
             alt="Mangalya Project Mobile"
             width={800}
             height={1200}
