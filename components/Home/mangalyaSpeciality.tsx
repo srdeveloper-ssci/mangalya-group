@@ -37,27 +37,29 @@ const FeatureCard = ({ title, description, iconUrl }: FeatureCardProps) => (
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M 160 15 
-           H 490 
-           C 505 15, 510 20, 510 35 
-           V 125 
-           C 510 140, 505 145, 490 145 
-           H 30 
-           C 15 145, 10 140, 10 125 
-           V 95 
-           C 10 50, 110 70, 110 15 
-           H 160"
-        stroke="white"
-        strokeOpacity="0.25"
-        strokeWidth="1.5"
-        strokeDasharray="6 6"
-        strokeLinecap="round"
-      />
+<path
+  d="M 130 1
+     H 488
+     A 14 14 0 0 1 502 15
+     V 131
+     A 14 14 0 0 1 488 145
+     H 22
+     A 14 14 0 0 1 8 131
+     V 80
+     C 2 50, 85 98, 110 10
+    A 21 8 0 0 1 130 1
+     z"
+  stroke="white"
+  strokeOpacity="0.25"
+  strokeWidth="1.5"
+  strokeDasharray="6 6"
+  strokeLinecap="round"
+  fill="none"
+/>
     </svg>
 
     {/* ICON CONTAINER - Now using Image component */}
-    <div className="absolute top-[0px] left-[20px] w-[75px] h-[75px] bg-[#008854] rounded-full flex items-center justify-center z-20 shadow-md overflow-hidden">
+    <div className="absolute top-[-30px] left-[20px] w-[75px] h-[75px] bg-[#008854] rounded-full flex items-center justify-center z-20 shadow-md overflow-hidden">
       {iconUrl && (
         <Image
           src={iconUrl}
