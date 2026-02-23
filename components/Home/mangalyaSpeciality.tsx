@@ -5,17 +5,20 @@ import Image from "next/image";
 const features = [
   {
     title: "Smart Design Execution",
-    description: "Efficient floor plans with smart cores ensure functional layouts for comfortable everyday living.",
+    description:
+      "Efficient floor plans with smart cores ensure functional layouts for comfortable everyday living.",
     iconUrl: "/icons/design-icon.png",
   },
   {
     title: "Long-Lasting Finishes & Materials",
-    description: "Durable finishes and quality fittings ensure low maintenance and long-term performance.",
+    description:
+      "Durable finishes and quality fittings ensure low maintenance and long-term performance.",
     iconUrl: "/icons/materials-icon.png",
   },
   {
     title: "Safety & Reliability",
-    description: "Earthquake-resistant structural design with comprehensive fire-safety planning ensures enhanced safety and compliance.",
+    description:
+      "Earthquake-resistant structural design with comprehensive fire-safety planning ensures enhanced safety and compliance.",
     iconUrl: "/icons/safety-icon.png",
   },
 ];
@@ -26,38 +29,38 @@ type FeatureCardProps = {
   iconUrl: string;
 };
 
-
 const FeatureCard = ({ title, description, iconUrl }: FeatureCardProps) => (
   <div className="relative w-full max-w-[520px] min-h-[145px] flex items-center">
-    {/* CUSTOM SVG BORDER - Precise S-Curve Path */}
+    {/* SVG BORDER (Same as yours) */}
     <svg
       className="absolute inset-0 w-full h-full"
       viewBox="0 0 520 160"
       fill="none"
       preserveAspectRatio="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M 160 15 
-           H 490 
-           C 505 15, 510 20, 510 35 
-           V 125 
-           C 510 140, 505 145, 490 145 
-           H 30 
-           C 15 145, 10 140, 10 125 
-           V 95 
-           C 10 50, 110 70, 110 15 
-           H 160"
+        d="M 130 1
+     H 488
+     A 14 14 0 0 1 502 15
+     V 131
+     A 14 14 0 0 1 488 145
+     H 22
+     A 14 14 0 0 1 8 131
+     V 80
+     C 2 50, 85 98, 110 10
+     A 21 8 0 0 1 130 1
+     z"
         stroke="white"
-        strokeOpacity="0.25"
-        strokeWidth="1.5"
+        strokeOpacity="0.5"
+        strokeWidth="1.3"
         strokeDasharray="6 6"
         strokeLinecap="round"
+        fill="none"
       />
     </svg>
 
-    {/* ICON CONTAINER - Now using Image component */}
-    <div className="absolute top-[0px] left-[20px] w-[75px] h-[75px] bg-[#008854] rounded-full flex items-center justify-center z-20 shadow-md overflow-hidden">
+    {/* ICON CONTAINER (UNCHANGED) */}
+    <div className="absolute md:top-[-30px] top-[-10] md:left-[20px] w-13 h-13 md:w-[75px] md:h-[75px] bg-[#008854] rounded-full flex items-center justify-center z-20 shadow-md overflow-hidden">
       {iconUrl && (
         <Image
           src={iconUrl}
@@ -70,23 +73,16 @@ const FeatureCard = ({ title, description, iconUrl }: FeatureCardProps) => (
     </div>
 
     {/* CONTENT */}
-    <div className="pl-32 pr-8 py-5">
-      <h3 className="text-white font-bold text-lg lg:text-xl mb-1 tracking-tight">
+    <div className="pr-8 py-0">
+      <h3 className=" pl-22 md:pl-32 text-white font-bold text-[14px] md:text-[20px] mb-3 tracking-tight">
         {title}
       </h3>
-      <div className="w-full h-[0.5px] bg-white opacity-20 mb-3"></div>
-      <p className="text-gray-400 text-[13px] lg:text-[14px] leading-snug">
+      <div className="md:ml-32 ml-22 w-[calc(100%-8rem)] h-[0.5px] bg-white opacity-40 mb-3"></div>
+      <p className="pl-10 text-gray-300 text-[10px] md:text-[14px] leading-snug pb-5">
         {description}
       </p>
     </div>
   </div>
-);
-
-const LeafIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 4C16 4 8 8 8 16C8 20 10 24 16 28C22 24 24 20 24 16C24 8 16 4 16 4Z" fill="#4ADE80" />
-    <path d="M16 8C16 8 12 10 12 16C12 18 13 20 16 22C19 20 20 18 20 16C20 10 16 8 16 8Z" fill="#22C55E" />
-  </svg>
 );
 
 export default function MangalyaSpeciality() {
@@ -94,22 +90,33 @@ export default function MangalyaSpeciality() {
     <section className="bg-[#292929] py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-stretch">
-          
-          {/* LEFT CONTENT (Preserved from your code) */}
-          <div className="lg:w-[45%]">
-            <div className="flex items-start gap-2 mb-6">
+          {/* LEFT CONTENT */}
+          <div className="lg:w-[45%] lg:pr-10 xl:pr-16">
+            {/* ✅ UPDATED HEADING WITH LEAF IMAGE */}
+            <div className="relative inline-flex items-center mb-6">
               <h2 className="text-3xl md:text-4xl font-serif italic text-white leading-tight">
                 The Mangalya
                 <br />
                 Speciality
               </h2>
-              <LeafIcon />
+
+              <div className="absolute -top-5 right-[-25px] md:-top-6 md:right-[-40px] w-10 md:w-14 pointer-events-none">
+                <Image
+                  src="/about-us/leaf.png"
+                  alt="leaf"
+                  width={64}
+                  height={64}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
             </div>
 
             <p className="text-gray-200 text-base mb-8 max-w-md font-['Poppins']">
               Each Mangalya Group project lies
               <span className="text-gray-300">
-                {" "}in designing societies where space, structure, and lifestyle
+                {" "}
+                in designing societies where space, structure, and lifestyle
               </span>
               <span className="text-gray-400"> work in harmony</span>
             </p>
@@ -125,21 +132,20 @@ export default function MangalyaSpeciality() {
             </div>
           </div>
 
-          {/* VERTICAL SEPARATOR LINE */}
-          <div className="hidden lg:block w-[1px] bg-white opacity-20 self-stretch mx-4"></div>
+          {/* VERTICAL SEPARATOR */}
+          <div className="hidden lg:block w-[1px] bg-white opacity-40 self-stretch mx-4"></div>
 
-          {/* RIGHT CONTENT - FEATURES (New & Responsive) */}
-          <div className="lg:w-[50%] flex flex-col gap-6 justify-center pl-10 ">
+          {/* RIGHT CONTENT (UNCHANGED) */}
+          <div className="lg:w-[50%] flex flex-col md:gap-12 gap-4 justify-center lg:pl-10 xl:pl-16">
             {features.map((feature, index) => (
-              <FeatureCard 
-                key={index} 
+              <FeatureCard
+                key={index}
                 title={feature.title}
                 description={feature.description}
                 iconUrl={feature.iconUrl}
               />
             ))}
           </div>
-          
         </div>
       </div>
     </section>
