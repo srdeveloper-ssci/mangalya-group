@@ -63,7 +63,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-white md:pt-16 px-6 md:px-12 lg:px-20 font-['Poppins']">
+    <section className="bg-white py-10 md:pt-16 px-6 md:px-12 lg:px-20 font-['Poppins']">
       <div className="max-w-[1100px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Content - Order 2 on mobile, 1 on desktop */}
