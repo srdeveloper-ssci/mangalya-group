@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function DisclaimerSection() {
   return (
-    <section className="md:py-16 bg-white">
+    <section className="md:py-16 py-8 bg-white">
       <div className="max-w-5xl mx-auto px-4 text-center">
         {/* Heading */}
         <h2
