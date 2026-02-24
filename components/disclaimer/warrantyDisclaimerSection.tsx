@@ -19,7 +19,7 @@ export default function WarrantyDisclaimerSection() {
 
         {/* CENTER CONTENT */}
         <div className="text-center px-2">
-          <h2 className="font-handwritten text-3xl md:text-4xl mb-6">
+          <h2 className="font-handwritten font-bold text-[35px] md:text-[45px] mb-6 text-gray-900">
             Warranty Disclaimer
           </h2>
 
@@ -35,13 +35,6 @@ export default function WarrantyDisclaimerSection() {
             to change without prior notice. Any computer-generated images or
             artists’ impressions are indicative of the actual designs.
           </p>
-
-          <Link
-            href="/brochure"
-            className="inline-block bg-black text-white px-8 py-3 text-sm hover:bg-gray-800 transition"
-          >
-            Download Brochure
-          </Link>
         </div>
 
         {/* RIGHT IMAGE */}
