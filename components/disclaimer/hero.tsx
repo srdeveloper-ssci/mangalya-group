@@ -7,7 +7,7 @@ export default function DisclaimerSection() {
       <div className="max-w-5xl mx-auto px-4 text-center">
         {/* Heading */}
         <h2
-          className="font-medium font-poppins mb-1 tracking-tight text-[35px] md:text-[50px]"
+          className="font-medium font-poppins mb-1 tracking-tight text-[25px] md:text-[50px]"
           style={{
             fontFamily: "'Arial', sans-serif",
             letterSpacing: "-0.5px",
