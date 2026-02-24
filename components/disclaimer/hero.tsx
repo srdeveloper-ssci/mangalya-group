@@ -17,7 +17,7 @@ export default function DisclaimerSection() {
         </h2>
 
         {/* Cursive subtitle */}
-        <p className="font-handwritten font-regular text-[15px] md:text-[25px] mb-4">
+        <p className="font-handwritten font-regular text-[20px] md:text-[25px] mb-4">
           Thank you for visiting
         </p>
 
