@@ -9,7 +9,7 @@ export default function HeroSection() {
         {/* Desktop Image */}
         <div className="hidden md:block w-full">
           <Image
-            src="/our-projects/mangalya-anant/anant-home.png"
+            src="/our-projects/mangalya-anant/anant-home-1.png"
             alt="Mangalya Project"
             width={1920}
             height={900}
