@@ -5,20 +5,13 @@ export default function PrivacyPolicy() {
     {
       title: "What This Privacy Policy Covers",
       content: [
-        "This Privacy Policy outlines our use of personally identifiable information that is shared by you on our site.",
-        "It also covers the treatment of personally identifiable information shared with us. This policy applies to personally identifiable information collected through any app or website we own or operate.",
-        "It does not apply to organizations not owned or controlled by us, nor to people who are not employed or managed by us. Additionally, it does not cover information required to be shared with public or private authorities as per applicable laws, court orders, or directions.",
+        "This Privacy Policy outlines our use of personally identifiable information that is shared by you on our site. It also covers the treatment of personally identifiable information shared with us.This policy applies to personally identifiable information collected through any app owned and operated by Mangalya Group.It does not apply to organizations not owned or controlled by us, nor to people who are not employed or managed by us. Additionally, it does not cover information required to be shared with public or private authorities as per applicable laws, court orders, or directions.",
       ],
     },
     {
       title: "Information Collection and Use",
       content: [
-        "We use your personal information solely to provide and improve our services. By using the site, you consent to the collection and use of information as described in this Privacy Policy.",
-        "We collect personally identifiable information when you submit an inquiry form on our website or chat with our apps.",
-        "While using our website, we may ask for certain personally identifiable details that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your name, phone number, email address, and other details pertaining to being contacted, overseeing the DNC/NOHC.",
-        "When submitting a form, we may request your name, email address, and phone number. You have the option not to submit this information. Once submitted, this information is stored securely in our database and is not shared with third parties.",
-        "We maintain a policy to respond to your queries, maintain records for future reference, and communicate with you about our products and services. Like many operators, we collect log data, which may include information such as your device's Internet Protocol address, browser type, pages visited, time and date of visit, and other statistics.",
-        "We also collect technical details, including device information, location data, and network carrier details when you use our mobile apps.",
+        "We use your personal information solely to provide and improve our services. By using the site, you consent to the collection and use of information as described in this Privacy Policy. We collect personally identifiable information when you submit an inquiry form on our website or interact with our apps. While using our website, we may ask for certain personally identifiable details that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your name. By providing this information, you consent to being contacted, overriding the DNC/NDNC. When submitting a form, we may request your name, email address, and phone number, along with any other details you provide in your comments. Once submitted, this information is stored securely in our database and is not shared with third parties. We use this information to respond to your queries, maintain records for future reference, and communicate with you about our products and services. Like many website operators, we collect log data, which may include information such as your IP address, browser type, browser version, pages visited, time and date of visit, duration of visit, and other statistics. We may collect technical details, including device information, location data, and network carrier details when you use our mobile apps.",
       ],
     },
     {
@@ -27,12 +20,12 @@ export default function PrivacyPolicy() {
         {
           title: "Personal Information",
           content:
-            "Name, gender, age, images, contact details (postal address, telephone numbers, email id), nationality, and other content.",
+            " Name, gender, age, images, contact details (postal address, telephone number, email ID), nationality, and other content.",
         },
         {
-          title: "Interactions with us",
+          title: "Interactions with Us",
           content:
-            "Records of any interactions with our team or any assistance given or references to us on social media.",
+            "Records of any interactions with our team or any references to us on social media",
         },
         {
           title: "Survey Responses",
@@ -50,7 +43,7 @@ export default function PrivacyPolicy() {
             "Mobile device advertising identifiers and geo-location data when using any Mangalya Group mobile application.",
         },
         {
-          title: "Location Data",
+          title: "Geo-Location Data",
           content:
             "Collected during the registration process on our apps to provide location-specific services.",
         },
@@ -61,35 +54,31 @@ export default function PrivacyPolicy() {
       bulletPoints: [
         {
           title:
-            "We do not sell, rent, or share personally identifiable information with third parties",
+            "We do not sell, rent, or share personally identifiable information with third parties except in the following circumstances:",
           content: "",
         },
         {
-          title: "Except with your explicit consent",
-          content: "",
-        },
-        {
-          title: "When we have your explicit consent",
+          title: "When we have your explicit consent.",
           content: "",
         },
         {
           title:
             "If required by law or in good faith belief that such disclosure is necessary to",
           content:
-            "Comply with legal obligations, enforce agreements, or respond to law enforcement requests.",
+            "respond to legal processes, court orders, or law enforcement requests.",
         },
         {
-          title: "To enforce our Privacy Policy or Terms of Service",
+          title: "To enforce our Privacy Policy or Terms of Service.",
           content: "",
         },
         {
           title:
-            "To respond to claims that content on our website violates the rights of third parties",
+            "To respond to claims that content on our website violates the rights of third parties.",
           content: "",
         },
         {
           title:
-            "To protect the rights, property, or personal safety of our users or the general public",
+            "To protect the rights, property, or personal safety of our users or the general public.",
           content: "",
         },
       ],
@@ -99,13 +88,13 @@ export default function PrivacyPolicy() {
       bulletPoints: [
         {
           title:
-            "The content and design of this website are the exclusive property of Mangalya Group",
+            "The content and design of this website are the exclusive property of Mangalya Group.",
           content:
-            "No person may, without our explicit consent, reproduce, or allow others to use or reproduce any content and design of the website or content in any way.",
+            "No person may use, reproduce, or allow others to use or reproduce any content, logos, or images without prior written consent from Mangalya Group.",
         },
         {
           title:
-            "The retrieval and display of website content for personal, commercial, or non-commercial purposes, as well as any modification or commercial use of the content, are strictly prohibited",
+            "The retrieval and display of website content for personal, commercial, or non-commercial purposes, as well as any modification or commercial use of content, are strictly prohibited.",
           content:
             "Unauthorized use of website content is prohibited and may result in legal action.",
         },
@@ -116,7 +105,7 @@ export default function PrivacyPolicy() {
       bulletPoints: [
         {
           title:
-            "This Privacy Policy is subject to change, and any modifications will be communicated on this page",
+            "This Privacy Policy is subject to change, and any modifications will be communicated on this page",
           content: "",
         },
       ],
@@ -143,7 +132,7 @@ export default function PrivacyPolicy() {
               within the environment of Mangalya Group. While care has been
               taken in the production of information on this website, Mangalya
               Group does not accept any liability for any loss incurred by
-              anyone relying on the information contained herein.{" "}
+              anyone relying on the information contained herein.
             </p>
           </div>
         </div>
