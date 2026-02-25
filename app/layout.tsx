@@ -19,6 +19,18 @@ export const metadata: Metadata = {
   },
   description:
     "At Mangalya Group, we take pride in shaping vibrant communities. From thoughtfully designed neighborhoods to elegant high-rise developments, our customer-first approach ensures the creation of residences that set new benchmarks for quality and longevity, standing the test of time and enriching lives for generations.",
+  keywords: [
+    "Mangalya Group",
+    "Real Estate",
+    "Luxury Apartments",
+    "2 BHK Flats",
+    "3 BHK Flats",
+    "Residential Projects",
+    "High Rise Apartments",
+    "Premium Homes",
+    "Property in India",
+    "Modern Housing Projects",
+  ],
 };
 
 export default function RootLayout({
