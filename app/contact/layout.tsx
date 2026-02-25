@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer/footer";
 import Navbar from "@/components/Header/navbar";
 import type { Metadata } from "next";
- 
+
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
 };
 
 function layout({ children }: { children: React.ReactNode }) {

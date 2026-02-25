@@ -4,6 +4,11 @@ import ConsideringGreaterNoida from "@/components/blogs/urban-living/considering
 import { UrbanHomeBlog } from "@/components/blogs/urban-living/hero";
 import LifestyleEvolution from "@/components/blogs/urban-living/lifestyleEvolution";
 import MangalyaPerspective from "@/components/blogs/urban-living/mangalyaPerspective";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Urban Living",
+};
 
 function page() {
   return (

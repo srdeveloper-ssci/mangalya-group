@@ -4,6 +4,11 @@ import { MangalyaStory } from "@/components/blogs/creating-communities-developin
 import OurIdentity from "@/components/blogs/creating-communities-developing-dreams/ourIdentity";
 import OurMethod from "@/components/blogs/creating-communities-developing-dreams/ourMethod";
 import WhatMakesUsUnique from "@/components/blogs/creating-communities-developing-dreams/whatMakesUsUnique";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Creating Communities Developing Dreams",
+};
 
 function page() {
   return (

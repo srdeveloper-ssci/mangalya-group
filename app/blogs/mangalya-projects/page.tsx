@@ -4,6 +4,11 @@ import ResidentsSayingSection from "@/components/blogs/mangalya-projects/residen
 import StoryBehindSuccess from "@/components/blogs/mangalya-projects/storyBehindSuccess";
 import WhatMakesMangalyaStandOut from "@/components/blogs/mangalya-projects/whatMakesMangalyaStandOut";
 import WhatSetsProjectsApartSection from "@/components/blogs/mangalya-projects/whatSetsProjectsApartSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mangalya Projects",
+};
 
 function page() {
   return (

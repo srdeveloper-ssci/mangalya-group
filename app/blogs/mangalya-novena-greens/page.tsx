@@ -4,6 +4,11 @@ import LocationSeamlessLiving from "@/components/blogs/mangalya-novena-greens/lo
 import MangalyaGroupAdvantage from "@/components/blogs/mangalya-novena-greens/mangalyaGroupAdvantage";
 import ModernDesignNatureSection from "@/components/blogs/mangalya-novena-greens/modernDesignNatureSection";
 import ReraFinanceFamilySection from "@/components/blogs/mangalya-novena-greens/reraFinanceFamilySection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mangalya Novena Green",
+};
 
 function page() {
   return (
