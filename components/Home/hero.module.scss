@@ -1,0 +1,70 @@
+.badges {
+  display: flex;
+  flex-direction: row;      // always row to match the design
+  gap: 0.5rem;             // tight gap so notches sit close together
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  @media (min-width: 640px) {
+    gap: 1rem;    
+  }
+  > *:nth-child(1) {
+    width: 10.2em;
+    // outline:2px solid red;
+    // background-image: url(../../public/left_mobile.png);
+    background-image: url(../../public/left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (min-width: 640px) {
+      // background-image: url(../../public/left.png);
+      background-size: auto;
+    }
+  }
+
+  > *:nth-child(2) {
+    width: 11em;
+    // outline:2px solid red;
+    background-image: url(../../public/center.png);
+    // background-image: url(../../public/center_mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (min-width: 640px) {
+      // background-image: url(../../public/center.png);
+      background-size: auto;
+    }
+  }
+
+  > *:nth-child(3) {
+    width: 10.53em;
+    // outline:2px solid red;
+    // background-image: url(../../public/right_mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    // padding: 0.5rem 1.2rem;
+    background-image: url(../../public/right.png);
+    @media (min-width: 640px) {
+      // background-image: url(../../public/right.png);
+      // padding: 0.5rem 0.5rem;
+      background-size: auto;
+    }
+  }
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  // font-size: 0.75rem;
+  font-weight: 600;
+  // letter-spacing: 0.05em;   // ← was 9999px (pill), now subtle rectangle
+  // border: 1px solid rgba(255, 255, 255, 0.3);
+
+  font-size: 0.6rem;
+  padding: 0.3rem 0.5rem;
+
+  @media (min-width: 640px) {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

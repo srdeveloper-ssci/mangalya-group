@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import styles from "./hero.module.scss"
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -141,16 +141,10 @@ export function HeroSection() {
         {/* Content - MAXIMIZED RIGHT ALIGNMENT */}
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-end pr-2 sm:pr-6 md:pr-10 lg:pr-12 text-right">
           {/* Badges */}
-          <div className="hero-badges flex flex-col sm:flex-row gap-2 sm:gap-3 mb-4 sm:mb-8 flex-wrap justify-end">
-            <span className="px-3 sm:px-4 py-1 sm:py-2 bg-white/20 backdrop-blur-md text-white text-xs sm:text-sm rounded-full border border-white/30">
-              2-3 BHK
-            </span>
-            <span className="px-3 sm:px-4 py-1 sm:py-2 bg-white/20 backdrop-blur-md text-white text-xs sm:text-sm rounded-full border border-white/30">
-              YOGA CENTER
-            </span>
-            <span className="px-3 sm:px-4 py-1 sm:py-2 bg-white/20 backdrop-blur-md text-white text-xs sm:text-sm rounded-full border border-white/30">
-              LUXURY FEELS
-            </span>
+          <div className={`${styles.badges} `}>
+             <span className={styles.badge}>2-3 BHK</span>
+             <span className={styles.badge}>YOGA CENTER</span>
+             <span className={styles.badge}>LUXURY FEELS</span>
           </div>
 
           {/* Heading */}
