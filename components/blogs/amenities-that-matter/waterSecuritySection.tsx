@@ -7,7 +7,7 @@ export default function WaterSecuritySection() {
       {/* Desktop Version */}
       <div className="relative w-full h-[260px] md:h-[360px] lg:h-[420px] overflow-hidden hidden md:block">
         <Image
-          src="/blogs/amenities-that-matter/waterImg.png"
+          src="/blogs/amenities-that-matter/WaterImg-new.png"
           alt="Water Security"
           fill
           className="object-cover"
