@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ResidentsSayingSection() {
   return (
@@ -36,12 +35,12 @@ export default function ResidentsSayingSection() {
             </h2>
 
             {/* Button - hidden on mobile here, shown at bottom */}
-            <Link
+            {/* <Link
               href="/brochure"
               className="hidden md:inline-block font-poppins bg-white text-black px-7 py-3 text-[16px] font-light hover:bg-gray-900 hover:text-white transition w-fit"
             >
               Download Brochure
-            </Link>
+            </Link> */}
           </div>
 
           {/* Paragraph */}
@@ -57,14 +56,14 @@ export default function ResidentsSayingSection() {
           </p>
 
           {/* Button - only on mobile, pinned to bottom */}
-          <div className="block md:hidden mt-auto">
+          {/* <div className="block md:hidden mt-auto">
             <Link
               href="/brochure"
               className="font-poppins inline-block bg-white text-black px-6 py-3 text-[14px] font-light hover:bg-gray-900 hover:text-white transition"
             >
               Download Brochure
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

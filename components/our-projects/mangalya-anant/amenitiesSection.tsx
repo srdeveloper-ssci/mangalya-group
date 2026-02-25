@@ -7,12 +7,12 @@ export function AmenitiesSection() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
   const images = [
-    "AmenitiesSection1.png",
-    "AmenitiesSection2.png",
-    "AmenitiesSection3.png",
-    "AmenitiesSection4.png",
-    "AmenitiesSection5.png",
-    "AmenitiesSection6.png",
+    "mangalya-ophir1.png",
+    "mangalya-ophir2.png",
+    "mangalya-ophir3.png",
+    "mangalya-ophir4.png",
+    "mangalya-ophir5.png",
+    "mangalya-ophir6.png",
   ];
 
   // Prevent background scroll when modal open
@@ -38,13 +38,13 @@ export function AmenitiesSection() {
           </h2>
 
           <p className="font-poppins font-light text-[13px] md:text-[16px] text-[#3F3F3F] leading-[1.28] max-w-[550px] mb-8 mx-auto text-center mt-3 md:mt-4">
-            Mangalya Novena Green Noida Extension Features
+            Mangalya Anant Noida Extension Features
           </p>
 
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
             {images.map((img, i) => {
-              const imgPath = `/our-projects/mangalya-anant/${img}`;
+              const imgPath = `/our-projects/mangalya-ophira/${img}`;
               return (
                 <div
                   key={i}

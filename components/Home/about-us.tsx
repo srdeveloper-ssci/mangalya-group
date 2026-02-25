@@ -6,9 +6,17 @@ import Link from "next/link";
 
 const FEATURES = ["2-3 BHK", "CLUB HOUSE", "SWIMMING POOL", "GYM"];
 
+// function Badge({ text }: { text: string }) {
+//   return (
+//     <span className="px-4 md:px-5 py-2 bg-gray-100 border border-gray-300 text-gray-900 rounded-full text-xs md:text-sm font-poppins font-medium whitespace-nowrap hover:bg-gray-200 transition-colors duration-200">
+//       {text}
+//     </span>
+//   );
+// }
+
 function Badge({ text }: { text: string }) {
   return (
-    <span className="px-4 md:px-5 py-2 bg-gray-100 border border-gray-300 text-gray-900 rounded-full text-xs md:text-sm font-poppins font-medium whitespace-nowrap hover:bg-gray-200 transition-colors duration-200">
+    <span className="px-3 md:px-5 py-2 bg-gray-100 border border-gray-300 text-gray-900 rounded-full text-[9px] md:text-[12px] font-poppins font-medium whitespace-nowrap hover:bg-gray-200 transition-colors duration-200">
       {text}
     </span>
   );
@@ -20,7 +28,7 @@ export function AboutSection() {
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
         {/* "ABOUT us" section - positioned at top right */}
         <div className="flex justify-end">
-          <div className="flex items-start gap-4 md:gap-5">
+          <div className="flex items-start gap-2 md:gap-5">
             <div className="w-20 md:w-24 lg:w-30 h-[1.5px] bg-black mt-3 md:mt-4"></div>
             <div className="text-right space-y-0 md:space-y-1">
               <h2 className="text-[25px] md:text-[50px] font-medium text-black tracking-[0.15em] font-poppins leading-none">
@@ -36,18 +44,17 @@ export function AboutSection() {
         </div>
 
         {/* Main heading with badges in same line */}
-        <div className="mb-12 md:mb-14 lg:mb-5">
-          <div className="flex flex-col lg:flex-row lg:items-start gap-4 md:gap-6">
+        <div className="mb-4 md:mb-14 lg:mb-5">
+          <div className="flex flex-col lg:flex-row lg:items-start gap-1 md:gap-6">
             {/* Main Heading */}
             <div className="flex-1">
-              <h1 className="text-[20px] md:text-[40px] font-poppins font-extra-light leading-[128%] text-gray-600">
-                Discover your dream of premium <br />
-                living at Mangalya
+              <h1 className="text-[20px] md:text-[40px] font-poppins font-extra-light leading-[128%] text-gray-700">
+                Discover your dream of premium living at Mangalya
               </h1>
             </div>
 
             {/* Badges container - in same line with proper gaps */}
-            <div className="flex flex-wrap gap-2 md:gap-3 items-start mt-2 lg:mt-15">
+            <div className="flex flex-wrap gap-2 md:gap-3 items-start mt-2 lg:mt-15 text-2">
               {FEATURES.map((feature) => (
                 <Badge key={feature} text={feature} />
               ))}
@@ -87,7 +94,7 @@ export function AboutSection() {
           </div>
 
           {/* Right Content - Description and CTA */}
-          <div className="lg:col-span-3 flex flex-col justify-center gap-8">
+          <div className="lg:col-span-3 flex flex-col justify-center gap-4">
             <p className="text-base md:text-[18px] leading-relaxed text-gray-900 font-poppins">
               At Mangalya Group, we build{" "}
               <span className="text-red-500 font-semibold">quality</span> homes

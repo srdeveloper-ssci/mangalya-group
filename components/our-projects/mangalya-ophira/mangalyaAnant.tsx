@@ -14,17 +14,17 @@ export function MangalyaSection() {
           <div className="md:w-[230px] md:h-[8px] w-[35%] h-1.5 bg-[#008854] rounded mb-2" />
 
           <h2 className="font-poppins text-[18px] md:text-[35px] leading-[1.28] font-medium mb-5">
-            Mangalya Anant. Setting a New Benchmark in Lifestyle & Long-Term
-            Worth.
+            Redefining the True Value of Modern Living at Ophira
           </h2>
 
           <p className="font-poppins font-light text-[13px] md:text-[16px] text-[#3F3F3F] leading-[1.28] max-w-[550px] mb-8">
-            Mangalya Anant, originally envisioned by Horizon Dwellings Pvt.
-            Ltd., is now under the esteemed management of Mangalya Group. Backed
-            by a legacy of excellence, the project blends timely delivery,
-            premium quality, and customer-first values—redefining affordable
-            luxury as a thoughtfully crafted lifestyle, shaped with passion,
-            precision, and perfection.
+            Mangalya Ophira, Greater Noida (West) offers a world-class lifestyle
+            surrounded by lush greenery and calm. Featuring modern amenities
+            like a health & yoga centre, parks, and a shopping plaza, it’s
+            designed for comfort, convenience, and everyday luxury. Choose from
+            impeccably planned 2 & 3 BHK apartments that are spacious, airy, and
+            flooded with natural light—crafted for elevated living and complete
+            peace of mind.
           </p>
 
           <button
@@ -47,8 +47,8 @@ export function MangalyaSection() {
                 Infrastructure
               </h4>
               <p className="font-poppins font-light text-[12px] text-[#3F3F3F] leading-[1.5]">
-                Trusted quality and nature-inspired living come together for
-                lasting value.
+                Thoughtfully planned layouts that balance comfort, movement, and
+                modern living.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export function MangalyaSection() {
           {/* BOTTOM IMAGE CARD */}
           <div className="bg-white">
             <Image
-              src="/our-projects/mangalya-ophira/mangalya.png"
+              src="/our-projects/mangalya-anant/anant.png"
               alt="Location map"
               width={520}
               height={300}
