@@ -34,9 +34,9 @@ export default function InitiativesSection() {
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* LEFT – Images */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-2 md:gap-6">
             {/* LEFT COLUMN (1 & 3) */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2 md:gap-6">
               {/* Image 1 */}
               <div className="relative h-[220px] md:h-[250px] overflow-hidden">
                 <Image
@@ -59,7 +59,7 @@ export default function InitiativesSection() {
             </div>
 
             {/* RIGHT COLUMN (2 & 4) */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2 md:gap-6">
               {/* Image 2 */}
               <div className="relative h-[280px] md:h-[320px] overflow-hidden">
                 <Image
