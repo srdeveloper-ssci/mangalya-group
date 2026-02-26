@@ -158,7 +158,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-[#16a34a] transition-colors"
             >
-              Tech Prizm
+              Tech Prizm.
             </a>
           </p>
           <div className="flex gap-6">
