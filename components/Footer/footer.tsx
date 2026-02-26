@@ -151,7 +151,15 @@ export default function Footer() {
       <div className="border-t border-gray-800 bg-gray-950 px-6 sm:px-10 lg:px-20 py-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <p className="text-gray-300 text-sm">
-            © {currentYear} Mangalya Group. All rights reserved.
+            © {currentYear} Mangalya Group. All rights reserved. Powered by{" "}
+            <a
+              href="https://in.linkedin.com/company/tech-prizm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#16a34a] transition-colors"
+            >
+              Tech Prizm
+            </a>
           </p>
           <div className="flex gap-6">
             {footerSections[2]?.links.slice(0, 2).map((link, idx) => (
