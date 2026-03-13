@@ -1,7 +1,8 @@
 import * as yup from "yup";
 import { parsePhoneNumberWithError } from "libphonenumber-js";
 
-export const url = "https://api-wo48.onrender.com/mangalya/form-submit";
+// ✅ Use local API route instead of direct backend URL
+export const url = "/api/contact"; // Changed from direct URL to local API route
 
 export const formSchema = yup.object({
   name: yup.string().min(3, "Name must be at least 3 characters").required("Name is required"),
