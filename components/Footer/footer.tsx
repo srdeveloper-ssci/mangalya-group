@@ -109,7 +109,7 @@ export default function Footer() {
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#16a34a]" />
               </h4>
               <div className="space-y-4">
-                <div>
+                {/* <div>
                   <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                     Phone
                   </p>
@@ -119,7 +119,7 @@ export default function Footer() {
                   >
                     +91 8273782839
                   </a>
-                </div>
+                </div> */}
                 <div>
                   <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                     Email
@@ -128,7 +128,7 @@ export default function Footer() {
                     href="mailto:info@mangalayagroup.in"
                     className="text-gray-300 text-sm hover:text-[#16a34a] transition-colors break-all"
                   >
-                    info@mangalayagroup.in
+                    info@mangalyagroup.in
                   </a>
                 </div>
                 <div>
