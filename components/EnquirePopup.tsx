@@ -1,207 +1,3 @@
-// "use client";
-
-// import { formSchema, toE164, url } from "@/lib/formValidation";
-// import { Dispatch, SetStateAction, useState } from "react";
-// import { usePathname } from "next/navigation";
-
-// /* 🔗 Project → Brochure map */
-// const BROCHURE_MAP: Record<string, string> = {
-//   "mangalya-novena-green":
-//     "/our-projects/mangalya-novena-green/Novena-Greens-Brochure.pdf",
-//   "mangalya-anant": "/our-projects/mangalya-anant/anant_brochure.pdf",
-//   "mangalya-ophira": "/our-projects/mangalya-ophira/ophira_brochure.pdf",
-// };
-
-// export default function EnquirePopup({
-//   open,
-//   setOpen,
-// }: {
-//   open: boolean;
-//   setOpen: Dispatch<SetStateAction<boolean>>;
-// }) {
-//   const pathname = usePathname();
-//   const projectSlug = pathname.split("/").pop() || "";
-
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [number, setNumber] = useState("");
-//   const [message, setMessage] = useState("");
-//   const [errors, setErrors] = useState<any>({});
-//   const [submitting, setSubmitting] = useState(false);
-
-//   if (!open) return null;
-
-//   const validate = () => {
-//     const err: any = {};
-
-//     if (!name.trim()) err.name = "Name required";
-
-//     if (!email.trim()) err.email = "Email required";
-//     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-//       err.email = "Invalid email";
-
-//     if (!number.trim()) err.number = "Number required";
-//     else if (!/^\d{10}$/.test(number)) err.number = "Enter 10 digit number";
-
-//     setErrors(err);
-//     return Object.keys(err).length === 0;
-//   };
-
-//   const handleSubmit = async () => {
-//     if (submitting) return;
-
-//     if (!validate()) return;
-
-//     try {
-//       setSubmitting(true);
-
-//       // 🔹 Yup validation
-//       await formSchema.validate(
-//         {
-//           name,
-//           email,
-//           phone: number,
-//         },
-//         { abortEarly: false },
-//       );
-
-//       // 🔹 Convert phone to E.164
-//       const formattedPhone = toE164(number);
-//       if (!formattedPhone) {
-//         alert("Invalid phone number");
-//         return;
-//       }
-
-//       // 🔹 API Call
-//       const response = await fetch(url, {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//           location: `Brochure - ${projectSlug}`,
-//           name,
-//           email,
-//           phone: formattedPhone,
-//           more: message, // UI message → backend more
-//         }),
-//       });
-
-//       const data = await response.json();
-
-//       if (!response.ok) {
-//         throw new Error(data.message || "Submission failed");
-//       }
-
-//       // 🔹 If API success → Download brochure
-//       const brochure = BROCHURE_MAP[projectSlug];
-//       if (!brochure) {
-//         alert("Brochure not found");
-//         return;
-//       }
-
-//       const link = document.createElement("a");
-//       link.href = brochure;
-//       link.download = brochure.split("/").pop()!;
-//       document.body.appendChild(link);
-//       link.click();
-//       document.body.removeChild(link);
-
-//       // 🔹 Reset form
-//       setName("");
-//       setEmail("");
-//       setNumber("");
-//       setMessage("");
-//       setErrors({});
-//       setOpen(false);
-//     } catch (error: any) {
-//       alert(error.message || "Something went wrong");
-//     } finally {
-//       setSubmitting(false);
-//     }
-//   };
-
-//   return (
-//     <div className="fixed inset-0 z-50 flex items-center justify-center">
-//       {/* Blur BG */}
-//       <div
-//         className="absolute inset-0 bg-black/40 backdrop-blur-md"
-//         onClick={() => setOpen(false)}
-//       />
-
-//       {/* Popup */}
-//       <div className="relative w-full max-w-[420px] mx-4 sm:mx-0 bg-[#f7f7f7] rounded-md shadow-2xl px-5 sm:px-8 py-6 sm:py-7">
-//         <h2 className="text-lg sm:text-xl font-semibold mb-5 sm:mb-6">
-//           Enquire Now
-//         </h2>
-
-//         <div className="space-y-5">
-//           {/* Name */}
-//           <div>
-//             <input
-//               value={name}
-//               onChange={(e) => setName(e.target.value)}
-//               placeholder="Enter your Full name"
-//               className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
-//             />
-//             {errors.name && (
-//               <p className="text-xs text-red-500 mt-1">{errors.name}</p>
-//             )}
-//           </div>
-
-//           {/* Email */}
-//           <div>
-//             <input
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//               placeholder="Email"
-//               className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
-//             />
-//             {errors.email && (
-//               <p className="text-xs text-red-500 mt-1">{errors.email}</p>
-//             )}
-//           </div>
-
-//           {/* Number */}
-//           <div>
-//             <input
-//               value={number}
-//               maxLength={10}
-//               onChange={(e) => setNumber(e.target.value.replace(/\D/g, ""))}
-//               placeholder="Enter Number"
-//               className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
-//             />
-//             {errors.number && (
-//               <p className="text-xs text-red-500 mt-1">{errors.number}</p>
-//             )}
-//           </div>
-
-//           {/* Message (optional) */}
-//           <textarea
-//             rows={3}
-//             value={message}
-//             onChange={(e) => setMessage(e.target.value)}
-//             placeholder="Write your message"
-//             className="w-full rounded-2xl border px-5 py-3 text-sm bg-white resize-none"
-//           />
-
-//           <div className="pt-4 flex">
-//             <button
-//               disabled={submitting}
-//               onClick={handleSubmit}
-//               className="w-full sm:w-auto bg-black text-white px-10 py-3 text-sm rounded-sm hover:bg-gray-900 transition disabled:opacity-60"
-//             >
-//               {submitting ? "Submitting..." : "Submit"}
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
 "use client";
 
 import { formSchema, toE164, url } from "@/lib/formValidation";
@@ -209,7 +5,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { usePathname } from "next/navigation";
 
 // Types
-type ToastType = 'success' | 'error';
+type ToastType = "success" | "error";
 
 interface ToastProps {
   message: string;
@@ -233,24 +29,56 @@ const BROCHURE_MAP: Record<string, string> = {
 
 // Toast Component
 const Toast = ({ message, type, onClose }: ToastProps) => {
-  const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
-  
+  const bgColor = type === "success" ? "bg-green-500" : "bg-red-500";
+
   return (
     <div className="fixed top-5 right-5 z-[60] animate-slide-in">
-      <div className={`${bgColor} text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px]`}>
-        {type === 'success' ? (
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+      <div
+        className={`${bgColor} text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px]`}
+      >
+        {type === "success" ? (
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 13l4 4L19 7"
+            ></path>
           </svg>
         ) : (
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
         )}
         <span className="flex-1 text-sm font-medium">{message}</span>
         <button onClick={onClose} className="text-white hover:text-gray-200">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
         </button>
       </div>
@@ -274,12 +102,16 @@ export default function EnquirePopup({
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<any>({});
   const [submitting, setSubmitting] = useState(false);
-  const [toast, setToast] = useState<ToastState>({ show: false, message: '', type: 'success' });
+  const [toast, setToast] = useState<ToastState>({
+    show: false,
+    message: "",
+    type: "success",
+  });
 
   const showToast = (message: string, type: ToastType) => {
     setToast({ show: true, message, type });
     setTimeout(() => {
-      setToast({ show: false, message: '', type: 'success' });
+      setToast({ show: false, message: "", type: "success" });
     }, 5000);
   };
 
@@ -327,7 +159,9 @@ export default function EnquirePopup({
         return;
       }
 
-      // 🔹 API Call
+      console.log("Sending to API route:", url);
+
+      // 🔹 API Call (now going through local proxy)
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -345,7 +179,7 @@ export default function EnquirePopup({
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Submission failed");
+        throw new Error(data.message || data.error || "Submission failed");
       }
 
       // 🔹 If API success → Download brochure
@@ -356,12 +190,15 @@ export default function EnquirePopup({
         return;
       }
 
-      const link = document.createElement("a");
-      link.href = brochure;
-      link.download = brochure.split("/").pop()!;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Small delay before download to ensure toast appears
+      setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = brochure;
+        link.download = brochure.split("/").pop()!;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 500);
 
       showToast("Brochure downloaded successfully!", "success");
 
@@ -371,13 +208,13 @@ export default function EnquirePopup({
       setNumber("");
       setMessage("");
       setErrors({});
-      
+
       // Close popup after successful submission
       setTimeout(() => {
         setOpen(false);
-      }, 1000);
-      
+      }, 1500);
     } catch (error: any) {
+      console.error("Submission error:", error);
       showToast(error.message || "Something went wrong", "error");
     } finally {
       setSubmitting(false);
@@ -388,13 +225,15 @@ export default function EnquirePopup({
     <>
       {/* Toast Container */}
       {toast.show && (
-        <Toast 
-          message={toast.message} 
+        <Toast
+          message={toast.message}
           type={toast.type}
-          onClose={() => setToast({ show: false, message: '', type: 'success' })}
+          onClose={() =>
+            setToast({ show: false, message: "", type: "success" })
+          }
         />
       )}
-      
+
       <div className="fixed inset-0 z-50 flex items-center justify-center">
         {/* Blur BG */}
         <div

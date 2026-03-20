@@ -172,7 +172,7 @@ export default function Navbar() {
                           Mangalya Ophira
                         </Link>
                       </div>
-
+                      
                       {/* Other Ventures */}
                       <div className="px-4 py-3 border-b border-gray-200">
                         <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-2">
@@ -180,6 +180,8 @@ export default function Navbar() {
                         </p>
                         <Link
                           href="https://snowvillage.in/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={`block px-3 py-2.5 text-[13px] font-['Poppins'] rounded transition-colors duration-200 ${
                             isActive("https://snowvillage.in/")
                               ? "bg-[#16a34a]/15 text-[#16a34a] font-medium"
@@ -190,6 +192,8 @@ export default function Navbar() {
                         </Link>
                         <Link
                           href="https://cozylounge.in/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={`block px-3 py-2.5 text-[13px] font-['Poppins'] rounded transition-colors duration-200 ${
                             isActive("https://cozylounge.in/")
                               ? "bg-[#16a34a]/15 text-[#16a34a] font-medium"
@@ -378,6 +382,8 @@ export default function Navbar() {
 
                     <Link
                       href="https://snowvillage.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`block py-2 px-2 rounded text-[13px] transition-colors duration-200 ${
                         pathname.includes("snowvillage")
                           ? "bg-[#16a34a]/15 text-[#16a34a] font-medium"
@@ -389,6 +395,8 @@ export default function Navbar() {
 
                     <Link
                       href="https://cozylounge.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`block py-2 px-2 rounded text-[13px] transition-colors duration-200 ${
                         pathname.includes("cozylounge")
                           ? "bg-[#16a34a]/15 text-[#16a34a] font-medium"

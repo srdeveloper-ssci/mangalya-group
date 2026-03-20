@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { formSchema, toE164, url } from "@/lib/formValidation";
+import { formSchema, toE164 } from "@/lib/formValidation";
+
+const API_URL = "/api/contact";
 
 const InstagramIcon = () => (
   <svg
@@ -147,19 +149,19 @@ export default function ContactSection() {
         return;
       }
 
-      console.log("Sending request to:", url);
+      console.log("Sending request to:", API_URL);
 
-      const response = await fetch(url, {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          location: "Contact Page",
           name: formData.fullName,
           email: formData.email,
           phone: formattedPhone,
           more: formData.message,
+          location: "Greater Noida", // Added location as per tested API
         }),
       });
 
@@ -169,7 +171,7 @@ export default function ContactSection() {
       console.log("Response data:", data);
 
       if (!response.ok) {
-        throw new Error(data.message || "Submission failed");
+        throw new Error(data.message || data.error || "Submission failed");
       }
 
       showToast("Form submitted successfully!", "success");
@@ -205,7 +207,7 @@ export default function ContactSection() {
       <section className="bg-white py-10 md:pt-16 px-6 md:px-12 lg:px-20 font-['Poppins']">
         <div className="max-w-[1100px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Left Content - Order 2 on mobile, 1 on desktop */}
+            {/* Left Content */}
             <div className="order-2 lg:order-1">
               <h2 className="text-[25px] md:text-[30px] font-semibold text-gray-900 mb-4">
                 Always Here to Help You
@@ -295,7 +297,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Right Content - Form - Order 1 on mobile, 2 on desktop */}
+            {/* Right Content - Form */}
             <div className="order-1 lg:order-2">
               <div className="bg-[#F4F5F7] shadow-2xl p-8 lg:p-10">
                 <h3 className="text-[25px] md:text-[30px] font-semibold text-gray-900 mb-2">
