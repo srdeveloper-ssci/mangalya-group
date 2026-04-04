@@ -172,7 +172,7 @@ export default function Navbar() {
                           Mangalya Ophira
                         </Link>
                       </div>
-                      
+
                       {/* Other Ventures */}
                       <div className="px-4 py-3 border-b border-gray-200">
                         <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-2">
@@ -190,7 +190,7 @@ export default function Navbar() {
                         >
                           Snow Village
                         </Link>
-                        <Link
+                        {/* <Link
                           href="https://cozylounge.in/"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -201,7 +201,7 @@ export default function Navbar() {
                           }`}
                         >
                           Cozy
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </div>

@@ -23,8 +23,8 @@ export default function Footer() {
         },
         { label: "Mangalya Anant", href: "/projects/mangalya-anant" },
         { label: "Mangalya Ophira", href: "/projects/mangalya-ophira" },
-        { label: "Snow Village", href: "https://snowvillage.in/" },
-        { label: "Cozy", href: "https://cozylounge.in/" },
+        // { label: "Snow Village", href: "https://snowvillage.in/" },
+        // { label: "Cozy", href: "https://cozylounge.in/" },
       ],
     },
     {
