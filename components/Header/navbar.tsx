@@ -267,7 +267,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+
       <div
         className={`lg:hidden fixed inset-0 z-40 transition-all duration-300
           ${mobileMenuOpen ? "visible" : "invisible"}
