@@ -78,7 +78,7 @@ export default function CSRGallery() {
                 className="absolute left-1/2 top-1/2 transition-all duration-[600ms] ease-[cubic-bezier(.4,0,.2,1)]"
                 style={{
                   transform: `translate(-50%,-50%) translateX(${tx}px) scale(${scale})`,
-                  zIndex: 90 - abs * 10,
+                  zIndex: 40 - abs * 10,
                   opacity,
                   filter: `brightness(${bright})`,
                   pointerEvents: opacity === 0 ? "none" : "auto",
@@ -133,7 +133,7 @@ export default function CSRGallery() {
         <button
           onClick={prev}
           aria-label="Previous"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-[999]
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30
             w-12 h-12 flex items-center justify-center rounded-full
             bg-white/90 backdrop-blur-sm hover:bg-green-500 hover:text-white
             text-gray-800 shadow-lg transition-all hover:scale-110 active:scale-95"
@@ -143,7 +143,7 @@ export default function CSRGallery() {
         <button
           onClick={next}
           aria-label="Next"
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-[999]
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30
             w-12 h-12 flex items-center justify-center rounded-full
             bg-white/90 backdrop-blur-sm hover:bg-green-500 hover:text-white
             text-gray-800 shadow-lg transition-all hover:scale-110 active:scale-95"
