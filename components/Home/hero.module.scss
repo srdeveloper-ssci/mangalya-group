@@ -1,70 +1,70 @@
 .badges {
   display: flex;
-  flex-direction: row;      // always row to match the design
-  gap: 0.5rem;             // tight gap so notches sit close together
+  flex-direction: row; // always row to match the design
+  gap: 0.5rem; // tight gap so the connecting bulges sit close together
   margin-bottom: 1rem;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+
   @media (min-width: 640px) {
-    gap: 1rem;    
-  }
-  > *:nth-child(1) {
-    width: 10.2em;
-    // outline:2px solid red;
-    // background-image: url(../../public/left_mobile.png);
-    background-image: url(../../public/left.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (min-width: 640px) {
-      // background-image: url(../../public/left.png);
-      background-size: auto;
-    }
+    gap: 1rem;
   }
 
-  > *:nth-child(2) {
-    width: 11em;
-    // outline:2px solid red;
-    background-image: url(../../public/center.png);
-    // background-image: url(../../public/center_mobile.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (min-width: 640px) {
-      // background-image: url(../../public/center.png);
-      background-size: auto;
-    }
+  // same PNGs as before, but used as a mask (on ::before, behind the text)
+  // instead of a background-image — a mask stretches to 100% of the box,
+  // so the exact shape always covers the badge no matter how wide the
+  // text makes it grow, instead of being clipped by a fixed image size
+  // outer corners get an extra border-radius on top of the mask so they
+  // read as fully rounded — border-radius clips the mask's painted area
+  // at the corners, it doesn't fight with the bulge in the middle of the edge
+  >*:nth-child(1)::before {
+    -webkit-mask-image: url(../../public/left.png);
+    mask-image: url(../../public/left.png);
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
   }
 
-  > *:nth-child(3) {
-    width: 10.53em;
-    // outline:2px solid red;
-    // background-image: url(../../public/right_mobile.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    // padding: 0.5rem 1.2rem;
-    background-image: url(../../public/right.png);
-    @media (min-width: 640px) {
-      // background-image: url(../../public/right.png);
-      // padding: 0.5rem 0.5rem;
-      background-size: auto;
-    }
+  >*:nth-child(2)::before {
+    -webkit-mask-image: url(../../public/center.png);
+    mask-image: url(../../public/center.png);
+  }
+
+  >*:nth-child(3)::before {
+    -webkit-mask-image: url(../../public/right.png);
+    mask-image: url(../../public/right.png);
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
   }
 }
 
 .badge {
+  position: relative;
+  z-index: 0; // scopes ::before's negative z-index to this element only
   display: flex;
   justify-content: center;
+  align-items: center;
+  white-space: nowrap;
   color: #fff;
-  // font-size: 0.75rem;
   font-weight: 600;
-  // letter-spacing: 0.05em;   // ← was 9999px (pill), now subtle rectangle
-  // border: 1px solid rgba(255, 255, 255, 0.3);
 
   font-size: 0.6rem;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.6rem;
 
   @media (min-width: 640px) {
     font-size: 0.875rem;
     padding: 0.5rem 1.5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1; // sits behind the badge text
+    inset: 0;
+    background: #fff; // the mask's own alpha supplies the exact translucency
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
   }
 }

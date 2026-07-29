@@ -60,7 +60,7 @@ const FeatureCard = ({ title, description, iconUrl }: FeatureCardProps) => (
     </svg>
 
     {/* ICON CONTAINER (UNCHANGED) */}
-    <div className="absolute md:top-[-30px] top-[-10] md:left-[20px] w-13 h-13 md:w-[75px] md:h-[75px] bg-[#008854] rounded-full flex items-center justify-center z-20 shadow-md overflow-hidden">
+    <div className="absolute md:top-[-30px] top-[-4px] left-[-8px] min-[400px]:top-[-10] min-[400px]:left-[0] md:left-0 xl:left-[10px] w-13 h-13 md:w-[75px] md:h-[75px] bg-[#008854] rounded-full flex items-center justify-center z-20 shadow-md overflow-hidden">
       {iconUrl && (
         <Image
           src={iconUrl}
@@ -74,10 +74,10 @@ const FeatureCard = ({ title, description, iconUrl }: FeatureCardProps) => (
 
     {/* CONTENT */}
     <div className="pr-8 py-0">
-      <h3 className=" pl-22 md:pl-32 text-white font-bold text-[14px] md:text-[20px] mb-3 tracking-tight">
+      <h3 className=" pl-22 min-[480px]:pl-27.5 md:pl-32 text-white font-bold text-[14px] md:text-[20px] mb-3 tracking-tight">
         {title}
       </h3>
-      <div className="md:ml-32 ml-22 w-[calc(100%-8rem)] h-[0.5px] bg-white opacity-40 mb-3"></div>
+      <div className="ml-22 min-[480px]:ml-27.5 md:ml-32 w-[calc(100%-8rem)] h-[0.5px] bg-white opacity-40 mb-3"></div>
       <p className="pl-10 text-gray-300 text-[10px] md:text-[14px] leading-snug pb-5">
         {description}
       </p>
@@ -89,9 +89,9 @@ export default function MangalyaSpeciality() {
   return (
     <section className="bg-[#292929] py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center lg:items-stretch">
           {/* LEFT CONTENT */}
-          <div className="lg:w-[45%] lg:pr-10 xl:pr-16">
+          <div className="lg:w-[45%] xl:pr-16">
             {/* ✅ UPDATED HEADING WITH LEAF IMAGE */}
             <div className="relative inline-flex items-center mb-6">
               <h2 className="text-3xl md:text-4xl font-serif italic text-white leading-tight">
@@ -136,7 +136,7 @@ export default function MangalyaSpeciality() {
           <div className="hidden lg:block w-[1px] bg-white opacity-40 self-stretch mx-4"></div>
 
           {/* RIGHT CONTENT (UNCHANGED) */}
-          <div className="lg:w-[50%] flex flex-col md:gap-12 gap-4 justify-center lg:pl-10 xl:pl-16">
+          <div className="lg:w-[50%] flex flex-col md:gap-12 gap-4 justify-center xl:pl-16">
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}
