@@ -3,6 +3,7 @@
 import { formSchema, toE164, url } from "@/lib/formValidation";
 import { Dispatch, SetStateAction, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 // Types
 type ToastType = "success" | "error";
@@ -86,12 +87,20 @@ const Toast = ({ message, type, onClose }: ToastProps) => {
   );
 };
 
+interface BrochureOverride {
+  name: string;
+  href: string;
+}
+
 export default function EnquirePopup({
   open,
   setOpen,
+  brochure,
 }: {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  /** Explicit brochure to download. Falls back to the current project route when omitted. */
+  brochure?: BrochureOverride;
 }) {
   const pathname = usePathname();
   const projectSlug = pathname.split("/").pop() || "";
@@ -100,6 +109,7 @@ export default function EnquirePopup({
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const [errors, setErrors] = useState<any>({});
   const [submitting, setSubmitting] = useState(false);
   const [toast, setToast] = useState<ToastState>({
@@ -128,6 +138,9 @@ export default function EnquirePopup({
 
     if (!number.trim()) err.number = "Number required";
     else if (!/^\d{10}$/.test(number)) err.number = "Enter 10 digit number";
+
+    if (!acceptTerms)
+      err.acceptTerms = "Please accept terms and privacy policy";
 
     setErrors(err);
     return Object.keys(err).length === 0;
@@ -168,7 +181,7 @@ export default function EnquirePopup({
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          location: `Brochure - ${projectSlug}`,
+          location: `Brochure - ${brochure?.name ?? projectSlug}`,
           name,
           email,
           phone: formattedPhone,
@@ -183,8 +196,8 @@ export default function EnquirePopup({
       }
 
       // 🔹 If API success → Download brochure
-      const brochure = BROCHURE_MAP[projectSlug];
-      if (!brochure) {
+      const brochureHref = brochure?.href ?? BROCHURE_MAP[projectSlug];
+      if (!brochureHref) {
         showToast("Brochure not found", "error");
         setSubmitting(false);
         return;
@@ -193,8 +206,8 @@ export default function EnquirePopup({
       // Small delay before download to ensure toast appears
       setTimeout(() => {
         const link = document.createElement("a");
-        link.href = brochure;
-        link.download = brochure.split("/").pop()!;
+        link.href = brochureHref;
+        link.download = brochureHref.split("/").pop()!;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -207,6 +220,7 @@ export default function EnquirePopup({
       setEmail("");
       setNumber("");
       setMessage("");
+      setAcceptTerms(false);
       setErrors({});
 
       // Close popup after successful submission
@@ -261,18 +275,6 @@ export default function EnquirePopup({
               )}
             </div>
 
-            {/* Email */}
-            <div>
-              <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-                className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
-              />
-              {errors.email && (
-                <p className="text-xs text-red-500 mt-1">{errors.email}</p>
-              )}
-            </div>
 
             {/* Number */}
             <div>
@@ -288,6 +290,20 @@ export default function EnquirePopup({
               )}
             </div>
 
+            {/* Email */}
+            <div>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+                className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
+              />
+              {errors.email && (
+                <p className="text-xs text-red-500 mt-1">{errors.email}</p>
+              )}
+            </div>
+
+
             {/* Message (optional) */}
             <textarea
               rows={3}
@@ -296,6 +312,43 @@ export default function EnquirePopup({
               placeholder="Write your message"
               className="w-full rounded-2xl border px-5 py-3 text-sm bg-white resize-none"
             />
+
+            {/* Consent Checkbox */}
+            <div>
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="enquireAcceptTerms"
+                  checked={acceptTerms}
+                  onChange={(e) => setAcceptTerms(e.target.checked)}
+                  className="w-4 h-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900 mt-1 cursor-pointer"
+                />
+                <label
+                  htmlFor="enquireAcceptTerms"
+                  className="text-sm text-gray-600 cursor-pointer"
+                >
+                  Accept{" "}
+                  <Link
+                    href="/privacy"
+                    className="text-blue-600 hover:underline font-medium"
+                  >
+                    terms
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    href="/privacy"
+                    className="text-blue-600 hover:underline font-medium"
+                  >
+                    privacy policy
+                  </Link>
+                </label>
+              </div>
+              {errors.acceptTerms && (
+                <p className="text-xs text-red-500 mt-1">
+                  {errors.acceptTerms}
+                </p>
+              )}
+            </div>
 
             <div className="pt-4 flex">
               <button
