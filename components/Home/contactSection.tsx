@@ -54,7 +54,7 @@ interface ToastState {
 // Toast Component
 const Toast = ({ message, type, onClose }: ToastProps) => {
   const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
-  
+
   return (
     <div className="fixed top-5 right-5 z-50 animate-slide-in">
       <div className={`${bgColor} text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px]`}>
@@ -86,7 +86,7 @@ export default function ContactSection() {
     message: "",
     acceptTerms: false,
   });
-  
+
   const [toast, setToast] = useState<ToastState>({ show: false, message: '', type: 'success' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -113,9 +113,9 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (isSubmitting) return;
-    
+
     console.log("Submit clicked");
 
     if (!formData.acceptTerms) {
@@ -184,7 +184,7 @@ export default function ContactSection() {
         message: "",
         acceptTerms: false,
       });
-      
+
     } catch (error: any) {
       console.log("Error caught:", error);
       showToast(error.message || "Something went wrong", "error");
@@ -197,13 +197,13 @@ export default function ContactSection() {
     <>
       {/* Toast Container */}
       {toast.show && (
-        <Toast 
-          message={toast.message} 
+        <Toast
+          message={toast.message}
           type={toast.type}
           onClose={() => setToast({ show: false, message: '', type: 'success' })}
         />
       )}
-      
+
       <section className="bg-white py-10 md:pt-16 px-6 md:px-12 lg:px-20 font-['Poppins']">
         <div className="max-w-[1100px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
@@ -321,18 +321,6 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Email */}
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email"
-                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
-                      required
-                    />
-                  </div>
 
                   {/* Phone */}
                   <div>
@@ -346,6 +334,21 @@ export default function ContactSection() {
                       required
                     />
                   </div>
+
+
+                  {/* Email */}
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+
 
                   {/* Message */}
                   <div>
@@ -397,9 +400,8 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`w-full px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 text-sm ${
-                        isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-                      }`}
+                      className={`w-full px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 text-sm ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                        }`}
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
