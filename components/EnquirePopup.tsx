@@ -132,7 +132,8 @@ export default function EnquirePopup({
 
     if (!name.trim()) err.name = "Name required";
 
-    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    if (!email.trim()) err.email = "Email required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       err.email = "Invalid email";
 
     if (!number.trim()) err.number = "Number required";
@@ -288,13 +289,14 @@ export default function EnquirePopup({
               )}
             </div>
 
-            {/* Email (optional) */}
+            {/* Email */}
             <div>
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
+                placeholder="Email *"
                 className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
+                required
               />
               {errors.email && (
                 <p className="text-xs text-red-500 mt-1">{errors.email}</p>

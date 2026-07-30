@@ -334,15 +334,16 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Email (optional) */}
+                  {/* Email */}
                   <div>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="Email"
+                      placeholder="Email *"
                       className="w-full px-4 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
+                      required
                     />
                   </div>
 
