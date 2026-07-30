@@ -132,8 +132,7 @@ export default function EnquirePopup({
 
     if (!name.trim()) err.name = "Name required";
 
-    if (!email.trim()) err.email = "Email required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       err.email = "Invalid email";
 
     if (!number.trim()) err.number = "Number required";
@@ -267,7 +266,7 @@ export default function EnquirePopup({
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your Full name"
+                placeholder="Full name *"
                 className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
               />
               {errors.name && (
@@ -275,14 +274,13 @@ export default function EnquirePopup({
               )}
             </div>
 
-
             {/* Number */}
             <div>
               <input
                 value={number}
                 maxLength={10}
                 onChange={(e) => setNumber(e.target.value.replace(/\D/g, ""))}
-                placeholder="Enter Number"
+                placeholder="Phone Number *"
                 className="w-full h-[52px] rounded-2xl border px-5 text-sm bg-white"
               />
               {errors.number && (
@@ -290,7 +288,7 @@ export default function EnquirePopup({
               )}
             </div>
 
-            {/* Email */}
+            {/* Email (optional) */}
             <div>
               <input
                 value={email}
@@ -302,7 +300,6 @@ export default function EnquirePopup({
                 <p className="text-xs text-red-500 mt-1">{errors.email}</p>
               )}
             </div>
-
 
             {/* Message (optional) */}
             <textarea
@@ -340,7 +337,8 @@ export default function EnquirePopup({
                     className="text-blue-600 hover:underline font-medium"
                   >
                     privacy policy
-                  </Link>
+                  </Link>{" "}
+                  <span className="text-red-500">*</span>
                 </label>
               </div>
               {errors.acceptTerms && (

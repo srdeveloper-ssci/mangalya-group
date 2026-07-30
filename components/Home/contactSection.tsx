@@ -315,12 +315,11 @@ export default function ContactSection() {
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleChange}
-                      placeholder="Enter your Full name"
+                      placeholder="Full name *"
                       className="w-full px-4 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                       required
                     />
                   </div>
-
 
                   {/* Phone */}
                   <div>
@@ -329,14 +328,13 @@ export default function ContactSection() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="Enter Number"
+                      placeholder="Phone Number *"
                       className="w-full px-4 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                       required
                     />
                   </div>
 
-
-                  {/* Email */}
+                  {/* Email (optional) */}
                   <div>
                     <input
                       type="email"
@@ -345,21 +343,18 @@ export default function ContactSection() {
                       onChange={handleChange}
                       placeholder="Email"
                       className="w-full px-4 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
-                      required
                     />
                   </div>
 
-
-                  {/* Message */}
+                  {/* Message (optional) */}
                   <div>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Write a message..."
+                      placeholder="Write a message"
                       rows={4}
                       className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all resize-none"
-                      required
                     />
                   </div>
 
@@ -391,7 +386,8 @@ export default function ContactSection() {
                         className="text-blue-600 hover:underline font-medium"
                       >
                         privacy policy
-                      </Link>
+                      </Link>{" "}
+                      <span className="text-red-500">*</span>
                     </label>
                   </div>
 

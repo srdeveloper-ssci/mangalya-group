@@ -6,7 +6,11 @@ export const url = "/api/contact"; // Changed from direct URL to local API route
 
 export const formSchema = yup.object({
   name: yup.string().min(3, "Name must be at least 3 characters").required("Name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
+  email: yup
+    .string()
+    .transform((value) => (value ? value : undefined))
+    .email("Invalid email")
+    .notRequired(),
   phone: yup
     .string()
     .matches(/^(?:\+91[\s-]?|91[\s-]?)?[6-9]\d{9}$/, "Invalid Indian phone number")
