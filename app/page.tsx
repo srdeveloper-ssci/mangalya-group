@@ -21,7 +21,7 @@ export default function Home() {
       <QuoteBanner />
       <AmenitiesGallery />
       <MangalyaSpeciality />
-      <ContactSection />
+      <ContactSection page="home" />
       <FAQSection />
       <Footer />
     </>

@@ -16,7 +16,7 @@ function page() {
       <DiscoverSection />
       <FloorPlanSection />
       <AmenitiesSection />
-      <ContactSection />
+      <ContactSection page="novena-green" />
     </div>
   );
 }

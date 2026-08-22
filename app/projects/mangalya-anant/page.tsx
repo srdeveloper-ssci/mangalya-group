@@ -16,7 +16,7 @@ function page() {
       <RedefineSection />
       <FloorPlanSection />
       <AmenitiesSection />
-      <ContactSection />
+      <ContactSection page="anant" />
     </div>
   );
 }

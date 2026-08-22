@@ -6,7 +6,7 @@ function page() {
   return (
     <div>
       <HeroSection />
-      <ContactSection />
+      <ContactSection page="contact" />
       <BottomLine />
     </div>
   );

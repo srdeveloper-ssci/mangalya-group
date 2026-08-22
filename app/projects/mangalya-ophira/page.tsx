@@ -16,7 +16,7 @@ function page() {
       <MangalyaSection />
       <FloorPlanSection />
       <AmenitiesSection />
-      <ContactSection />
+      <ContactSection page="ophira" />
     </div>
   );
 }
