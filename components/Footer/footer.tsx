@@ -125,7 +125,7 @@ export default function Footer() {
                     Email
                   </p>
                   <a
-                    href="mailto:info@mangalayagroup.in"
+                    href="mailto:info@mangalyagroup.in"
                     className="text-gray-300 text-sm hover:text-[#16a34a] transition-colors break-all"
                   >
                     info@mangalyagroup.in

@@ -4,13 +4,14 @@ import Image from "next/image";
 export function HomeBuyerHero() {
   return (
     <section className="w-full h-auto pt-8 md:py-0 bg-white">
+      <h1 className="sr-only">Amenities That Matter: What Modern Homebuyers Really Want in 2026</h1>
       {/* Image Container */}
       <div className="relative w-full">
         {/* Desktop Image */}
         <div className="hidden md:block">
           <Image
             src="/blogs/amenities-that-matter/amenities-hero.png"
-            alt="Mangalya Story Desktop"
+            alt="Amenities that matter to modern homebuyers"
             width={1920}
             height={1080}
             priority
@@ -23,7 +24,7 @@ export function HomeBuyerHero() {
         <div className="block md:hidden flex justify-center">
           <Image
             src="/blogs/amenities-that-matter/amenities-hero-12.png"
-            alt="Mangalya Story Mobile"
+            alt="Amenities that matter to modern homebuyers"
             width={800}
             height={1000}
             priority

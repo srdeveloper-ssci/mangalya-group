@@ -4,13 +4,14 @@ import Image from "next/image";
 export function MangalyaHomeBlog() {
   return (
     <section className="w-full h-auto pt-2 pb-12 md:pb-16 bg-white">
+      <h1 className="sr-only">Mangalya Projects Are Turning Heads in Noida West &amp; Ghaziabad</h1>
       {/* Image Container */}
       <div className="relative w-full">
         {/* Desktop Image */}
         <div className="hidden md:block">
           <Image
             src="/blogs/mangalya-projects/mangalya-hero.png"
-            alt="Mangalya Story Desktop"
+            alt="Mangalya projects in Noida West and Ghaziabad"
             width={1920}
             height={1080}
             priority
@@ -23,7 +24,7 @@ export function MangalyaHomeBlog() {
         <div className="block md:hidden flex justify-center">
           <Image
             src="/blogs/mangalya-projects/mangalya-hero-mobile.png"
-            alt="Mangalya Story Mobile"
+            alt="Mangalya projects in Noida West and Ghaziabad"
             width={800}
             height={1000}
             priority

@@ -48,9 +48,9 @@ export function AboutSection() {
           <div className="flex flex-col lg:flex-row lg:items-start gap-1 md:gap-6">
             {/* Main Heading */}
             <div className="flex-1">
-              <h1 className="text-[20px] md:text-[40px] font-poppins font-extra-light leading-[128%] text-gray-700">
+              <h2 className="text-[20px] md:text-[40px] font-poppins font-extra-light leading-[128%] text-gray-700">
                 Discover your dream of premium living at Mangalya
-              </h1>
+              </h2>
             </div>
 
             {/* Badges container - in same line with proper gaps */}

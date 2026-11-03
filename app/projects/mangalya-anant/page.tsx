@@ -4,10 +4,14 @@ import FloorPlanSection from "@/components/our-projects/mangalya-anant/floorPlan
 import HeroSection from "@/components/our-projects/mangalya-anant/hero";
 import { RedefineSection } from "@/components/our-projects/mangalya-anant/redefine";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Anant",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Mangalya Anant – Premium Apartments in Noida Extension",
+  path: "/projects/mangalya-anant",
+  image: "/og/anant.jpg",
+  description: "Mangalya Anant (UP RERA: UPRERAPRJ4306) — peaceful, premium residences in Noida Extension. View floor plans, amenities and download the brochure."
+});
 
 function page() {
   return (

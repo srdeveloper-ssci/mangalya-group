@@ -5,13 +5,14 @@ import Link from "next/link";
 export function NovenaHomeBlog() {
   return (
     <section className="w-full h-auto pt-8 md:py-0 bg-white">
+      <h1 className="sr-only">Inside Mangalya Novena Greens: A New Standard for Modern Living</h1>
       {/* Image Container */}
       <div className="relative w-full">
         {/* Desktop Image */}
         <div className="hidden md:block">
           <Image
             src="/blogs/mangalya-novena-greens/heroImg.png"
-            alt="Mangalya Story Desktop"
+            alt="Inside Mangalya Novena Greens"
             width={1920}
             height={1080}
             priority
@@ -24,7 +25,7 @@ export function NovenaHomeBlog() {
         <div className="block md:hidden flex justify-center">
           <Image
             src="/blogs/mangalya-novena-greens/heroImg-mobile.png"
-            alt="Mangalya Story Mobile"
+            alt="Inside Mangalya Novena Greens"
             width={800}
             height={1000}
             priority
