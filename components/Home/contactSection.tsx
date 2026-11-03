@@ -296,10 +296,10 @@ export default function ContactSection({ page = "home" }: ContactSectionProps) {
                       Email
                     </h3>
                     <a
-                      href="mailto:info@mangalayagroup.in"
+                      href="mailto:info@mangalyagroup.in"
                       className="text-[#707070] text-[12px] font-light leading-relaxed"
                     >
-                      info@mangalayagroup.in
+                      info@mangalyagroup.in
                     </a>
                   </div>
                 </div>

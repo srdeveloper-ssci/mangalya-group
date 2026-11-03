@@ -7,7 +7,7 @@ export default function InitiativesSection() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-16 md:mb-20">
-          <h1
+          <h2
             className="text-[28px] md:text-5xl lg:text-6xl text-gray-900 mb-2"
             style={{
               fontFamily: "'Brush Script MT', cursive",
@@ -17,8 +17,8 @@ export default function InitiativesSection() {
             }}
           >
             Built on Trust. Driven by
-          </h1>
-          <h1
+          </h2>
+          <h2
             className="text-4xl md:text-5xl lg:text-6xl text-gray-900"
             style={{
               fontFamily: "'Brush Script MT', cursive",
@@ -28,7 +28,7 @@ export default function InitiativesSection() {
             }}
           >
             Customers
-          </h1>
+          </h2>
         </div>
 
         {/* Content */}

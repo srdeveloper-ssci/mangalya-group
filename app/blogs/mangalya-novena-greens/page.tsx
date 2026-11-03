@@ -5,10 +5,15 @@ import MangalyaGroupAdvantage from "@/components/blogs/mangalya-novena-greens/ma
 import ModernDesignNatureSection from "@/components/blogs/mangalya-novena-greens/modernDesignNatureSection";
 import ReraFinanceFamilySection from "@/components/blogs/mangalya-novena-greens/reraFinanceFamilySection";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Mangalya Novena Green",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Inside Mangalya Novena Greens: A New Standard for Modern Living",
+  path: "/blogs/mangalya-novena-greens",
+  image: "/og/blog-novena.jpg",
+  type: "article",
+  description: "A closer look at Mangalya Novena Greens — modern design, everyday facilities, location advantages and RERA-backed peace of mind in Greater Noida West."
+});
 
 function page() {
   return (

@@ -8,9 +8,9 @@ export default function BlogHero() {
       <div className="flex flex-col items-center text-center mb-6 md:mb-8 pt-8 md:pt-10">
         {/* Heading */}
         <div className="relative inline-flex items-center">
-          <h2 className="font-Montserrat font-medium text-[30px] md:text-[36px] lg:text-[40px] text-black tracking-wide">
+          <h1 className="font-Montserrat font-medium text-[30px] md:text-[36px] lg:text-[40px] text-black tracking-wide">
             Blogs
-          </h2>
+          </h1>
 
           {/* Leaf */}
           <div className="absolute -top-6 right-[-32px] md:right-[-45px] w-12 md:w-16 pointer-events-none">
@@ -40,7 +40,7 @@ export default function BlogHero() {
           <div className="relative w-full h-64 md:h-80 overflow-hidden cursor-pointer">
             <Image
               src="/blogs/footer-logo.png"
-              alt="Blog Hero"
+              alt="Mangalya Group logo"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
               priority

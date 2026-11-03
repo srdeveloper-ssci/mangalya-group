@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Is the title of the property clear?",
     answer:
-      "For all prestige properties, legal due diligence is carried out. We ensure that the land is freehold, marketable, and free from all encumbrances.",
+      "For all Mangalya Group properties, legal due diligence is carried out. We ensure that the land is freehold, marketable, and free from all encumbrances.",
   },
   {
     question: "What happens if construction or possession is delayed?",
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "How are instalments to be paid – is it time bound?",
-    answer: "Yes, we at Prestige follow a time-linked payment plan.",
+    answer: "Yes, we at Mangalya Group follow a time-linked payment plan.",
   },
   {
     question: "When do I get a confirmed allotment?",

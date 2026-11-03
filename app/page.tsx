@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { DEFAULT_DESCRIPTION, pageMetadata } from "@/lib/seo";
 import Footer from "@/components/Footer/footer";
 import Navbar from "@/components/Header/navbar";
 import { AboutSection } from "@/components/Home/about-us";
@@ -9,6 +11,13 @@ import InfoCardsSection from "@/components/Home/InfoCardsSectiondemo";
 import MangalyaSpeciality from "@/components/Home/mangalyaSpeciality";
 import QuoteBanner from "@/components/Home/quoteBanner";
 import { TopProperties } from "@/components/Home/top-performig";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Mangalya Group | Premium Homes in Greater Noida West",
+  description: DEFAULT_DESCRIPTION,
+  path: "/",
+  imageAlt: "Mangalya Group residential towers",
+});
 
 export default function Home() {
   return (

@@ -5,10 +5,15 @@ import StoryBehindSuccess from "@/components/blogs/mangalya-projects/storyBehind
 import WhatMakesMangalyaStandOut from "@/components/blogs/mangalya-projects/whatMakesMangalyaStandOut";
 import WhatSetsProjectsApartSection from "@/components/blogs/mangalya-projects/whatSetsProjectsApartSection";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Mangalya Projects",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Why Mangalya Projects Are Turning Heads in Noida West & Ghaziabad",
+  path: "/blogs/mangalya-projects",
+  image: "/og/blog-projects.jpg",
+  type: "article",
+  description: "What sets Mangalya projects apart in Noida West and Ghaziabad — the amenities, the story behind the success, and what residents are saying."
+});
 
 function page() {
   return (

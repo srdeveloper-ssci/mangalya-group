@@ -4,13 +4,14 @@ import Image from "next/image";
 export function MangalyaStory() {
   return (
     <section className="w-full h-auto pt-8 md:py-0 bg-white">
+      <h1 className="sr-only">The Mangalya Group Story: Creating Communities, Developing Dreams</h1>
       {/* Image Container */}
       <div className="relative w-full">
         {/* Desktop Image */}
         <div className="hidden md:block">
           <Image
             src="/blogs/creating-communities-developing-dreams/blogs-1.png"
-            alt="Mangalya Story Desktop"
+            alt="The Mangalya Group story"
             width={1920}
             height={1080}
             priority
@@ -23,7 +24,7 @@ export function MangalyaStory() {
         <div className="block md:hidden flex justify-center">
           <Image
             src="/blogs/creating-communities-developing-dreams/blogs-1-12.png"
-            alt="Mangalya Story Mobile"
+            alt="The Mangalya Group story"
             width={800}
             height={1000}
             priority

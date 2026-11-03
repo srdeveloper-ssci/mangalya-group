@@ -5,13 +5,14 @@ import Link from "next/link";
 export function UrbanHomeBlog() {
   return (
     <section className="w-full h-auto pt-2 pb-12 md:pb-16 bg-white">
+      <h1 className="sr-only">Greater Noida Is the Future of Urban Living</h1>
       {/* Image Container */}
       <div className="relative w-full">
         {/* Desktop Image */}
         <div className="hidden md:block">
           <Image
             src="/blogs/urban-living/urban-living-home.png"
-            alt="Mangalya Story Desktop"
+            alt="Urban living in Greater Noida"
             width={1920}
             height={1080}
             priority
@@ -24,7 +25,7 @@ export function UrbanHomeBlog() {
         <div className="block md:hidden flex justify-center">
           <Image
             src="/blogs/urban-living/urban-living-home-mobile.png"
-            alt="Mangalya Story Mobile"
+            alt="Urban living in Greater Noida"
             width={800}
             height={1000}
             priority

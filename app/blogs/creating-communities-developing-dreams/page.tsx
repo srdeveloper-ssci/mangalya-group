@@ -5,10 +5,15 @@ import OurIdentity from "@/components/blogs/creating-communities-developing-drea
 import OurMethod from "@/components/blogs/creating-communities-developing-dreams/ourMethod";
 import WhatMakesUsUnique from "@/components/blogs/creating-communities-developing-dreams/whatMakesUsUnique";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Creating Communities Developing Dreams",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "The Mangalya Group Story: Creating Communities, Developing Dreams",
+  path: "/blogs/creating-communities-developing-dreams",
+  image: "/og/blog-communities.jpg",
+  type: "article",
+  description: "The story behind Mangalya Group — our identity, our method, and what makes us unique as we build homes and communities built on trust."
+});
 
 function page() {
   return (

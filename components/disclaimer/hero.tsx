@@ -6,7 +6,7 @@ export default function DisclaimerSection() {
     <section className="md:py-16 py-8 bg-white">
       <div className="max-w-5xl mx-auto px-4 text-center">
         {/* Heading */}
-        <h2
+        <h1
           className="font-medium font-poppins mb-1 tracking-tight text-[25px] md:text-[50px]"
           style={{
             fontFamily: "'Arial', sans-serif",
@@ -14,7 +14,7 @@ export default function DisclaimerSection() {
           }}
         >
           Disclaimer
-        </h2>
+        </h1>
 
         {/* Cursive subtitle */}
         <p className="font-handwritten font-regular text-[20px] md:text-[25px] mb-4">
